@@ -1,3 +1,7 @@
+output "data_factory_linked_service_cosmosdbs_id" {
+  description = "Map of id values across all data_factory_linked_service_cosmosdbs, keyed the same as var.data_factory_linked_service_cosmosdbs"
+  value       = { for k, v in azurerm_data_factory_linked_service_cosmosdb.data_factory_linked_service_cosmosdbs : k => v.id }
+}
 output "data_factory_linked_service_cosmosdbs_account_endpoint" {
   description = "Map of account_endpoint values across all data_factory_linked_service_cosmosdbs, keyed the same as var.data_factory_linked_service_cosmosdbs"
   value       = { for k, v in azurerm_data_factory_linked_service_cosmosdb.data_factory_linked_service_cosmosdbs : k => v.account_endpoint }
